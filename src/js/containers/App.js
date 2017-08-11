@@ -1,23 +1,39 @@
 import React from 'react';
-import { Cs } from './../components';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { increaseAction, cutbackAction } from '../actions/cs'
 
 class App extends React.Component {
-  state = {
-    value: 0
-  };
-  click = () => {
-    this.setState({
-      value: this.state.value+1
-    })
-  };
   render() {
-    const { value } = this.state;
+    const { value, onIncreaseClick } = this.props;
     return (
       <div>
-        <Cs value={value} click={this.click}/>
+        <Cs value={value} onclick1={onIncreaseClick}/>
+        <div>{value}</div>
+        <button type="button" onClick={onIncreaseClick}>kkk</button>
       </div>
     )
   }
 }
 
-export default App
+App.propTypes = {
+  value: PropTypes.number.isRequired,
+  onIncreaseClick: PropTypes.func.isRequired
+};
+
+const mapStateToProps = (state) => {
+  return {
+    value: state.count
+  }
+};
+
+const mapDispatchTo = (dispatch) => {
+  return {
+    onIncreaseClick: () => dispatch(increaseAction)
+  }
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchTo
+)(App)
