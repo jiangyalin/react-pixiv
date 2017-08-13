@@ -1,2 +1,7 @@
-const increase = 'increase';
-export const aa = () => ({ type: increase });
+import {
+  increase,
+  cutback
+} from './actionsTypes'
+
+export const increaseAction = { type: increase };
+export const cutbackAction = { type: cutback};

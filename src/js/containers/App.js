@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { increaseAction, cutbackAction } from '../actions/cs'
+import { Cs } from './../components'
 
 class App extends React.Component {
   render() {
