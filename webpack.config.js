@@ -12,6 +12,7 @@ const config = {
     publicPath: '/'
   },
   devServer: {
+    host: '0.0.0.0',
     hot: true, // 激活服务器的HMR
     contentBase: path.resolve(__dirname, 'dist'),
     publicPath: '/',
