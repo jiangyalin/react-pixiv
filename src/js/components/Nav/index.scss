@@ -1,0 +1,45 @@
+.box{
+  width: 100%;
+  height: 65px;
+  color: #fff;
+  background-color: #2196f3;
+}
+.box .bars{
+  float: left;
+  width: 65px;
+  font-size: 21px;
+  text-align: center;
+  line-height: .65rem;
+}
+.tt{
+  display: block;
+  float: left;
+  padding: 0 20px;
+  height: 100%;
+  font-size: 21px;
+  line-height: .65rem;
+}
+.fr{
+  float: right;
+  height: 100%;
+}
+.li{
+  opacity: .5;
+  padding: 14px 0 6px 0;
+  float: left;
+  width: 52px;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.fa{
+  font-size: .21rem;
+  line-height: .27rem;
+}
+.nav{
+  display: block;
+  font-size: .14rem;
+}
+.active{
+  opacity: 1;
+}

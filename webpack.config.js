@@ -36,7 +36,19 @@ const config = {
       ],
       exclude: /node_modules/,
       include: [
-        path.resolve(__dirname, 'src')
+        path.resolve(__dirname, 'src'),
+        path.resolve(__dirname, 'bower_components')
+      ]
+    }, {
+      test: /\.css$/,
+      use: [
+        {loader: 'style-loader'},
+        {loader: 'css-loader'},
+        {loader: 'postcss-loader'}
+      ],
+      exclude: /node_modules/,
+      include: [
+        path.resolve(__dirname, 'bower_components')
       ]
     }, {
       test: /\.(otf|eot|svg|ttf|woff|woff2).*$/,
@@ -45,7 +57,8 @@ const config = {
       ],
       exclude: /node_modules/,
       include: [
-        path.resolve(__dirname, 'src')
+        path.resolve(__dirname, 'src'),
+        path.resolve(__dirname, 'bower_components')
       ]
     }, {
       test: /\.(png|jpg)$/,
@@ -54,7 +67,8 @@ const config = {
       ],
       exclude: /node_modules/,
       include: [
-        path.resolve(__dirname, 'src')
+        path.resolve(__dirname, 'src'),
+        path.resolve(__dirname, 'bower_components')
       ]
     }]
   },

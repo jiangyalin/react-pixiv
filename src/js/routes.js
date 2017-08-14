@@ -9,8 +9,8 @@ import {
 
 const Routes = ({ store, history }) => (
     <Router history={history}>
-      <Route exact path="/" component={App}>
-        <IndexRoute component={App}/>
+      <Route exact path="/" component={Home}>
+        <IndexRoute component={Home}/>
       </Route>
     </Router>
 );
