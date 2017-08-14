@@ -1,5 +1,4 @@
 import React from 'react';
-import { aa } from '../../actions/Cs';
 
 class Cs extends React.Component {
   render() {

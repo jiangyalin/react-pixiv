@@ -10,8 +10,6 @@ class App extends React.Component {
     return (
       <div>
         <Cs value={value} onclick1={onIncreaseClick}/>
-        <div>{value}</div>
-        <button type="button" onClick={onIncreaseClick}>kkk</button>
       </div>
     )
   }
