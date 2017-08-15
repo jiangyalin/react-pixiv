@@ -1,17 +1,35 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { connect } from 'react-redux';
+import { turn } from '../actions/Toolbar';
 import { Nav, HomeNav, Toolbar } from './../components';
 
 class Home extends React.Component {
   render() {
+    const { dataToolbar, onTurnClick } = this.props;
     return (
       <div>
-        <Nav/>
+        <Nav homeClick={onTurnClick}/>
         <HomeNav/>
-        <Toolbar/>
+        <Toolbar data={dataToolbar} onclick={onTurnClick}/>
       </div>
     )
   }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+  return {
+    dataToolbar: state.toolber,
+    userInfo: state.toolber.userInfo
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onTurnClick: () => dispatch(turn)
+  }
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home)

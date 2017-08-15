@@ -6,10 +6,10 @@ import { createStore } from 'redux';
 import '../styles/public.scss'
 import '../../bower_components/font-awesome/css/font-awesome.min.css'
 import Routes from './routes';
-import { cs } from './reducers';
+import reducers from './reducers';
 import { Provider } from 'react-redux';
 
-const store = createStore(cs);
+const store = createStore(reducers);
 const rootEl = document.getElementById('app');
 
 render(

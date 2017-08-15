@@ -4,55 +4,53 @@ import PixivLeftInfo from './PixivLeftInfo'
 import PixivLeftTitle from './PixivLeftTitle'
 import styles from './index.scss'
 
-const Toolbar = ({props}) => {
-  return (
-    <div className={styles.box}>
-      <div className={styles.bd}>
-        <div className={styles.mn}>
-          <PixivLeftInfo/>
-          <ul className={styles.lst}>
-            <li className={styles.li}>
-              <PixivLeftLink path="" icon="fa-home" text="主页"/>
-            </li>
-            <li className={styles.li}>
-              <PixivLeftLink path="/" icon="fa-lemon-o" text="最新"/>
-            </li>
-            <li className={styles.li}>
-              <PixivLeftLink path="/" icon="fa-search" text="搜索"/>
-            </li>
-          </ul>
-          <ul className={styles.lst}>
-            <li className={styles.li}>
-              <PixivLeftLink path="/" icon="fa-image" text="你的作品"/>
-            </li>
-            <li className={styles.li}>
-              <PixivLeftLink path="/" icon="fa-heart" text="收集"/>
-            </li>
-            <li className={styles.li}>
-              <PixivLeftLink path="/" icon="fa-clock-o" text="浏览记录"/>
-            </li>
-            <li className={styles.li}>
-              <PixivLeftLink path="/" icon="fa-bookmark" text="热门标签"/>
-            </li>
-          </ul>
-          <ul className={styles.lst}>
-            <li>
-              <PixivLeftTitle title="其他"/>
-            </li>
-            <li className={styles.li}>
-              <PixivLeftLink path="/" icon="fa-comment" text="问题反馈"/>
-            </li>
-            <li className={styles.li}>
-              <PixivLeftLink path="/" icon="fa-question-circle-o" text="帮助"/>
-            </li>
-            <li className={styles.li}>
-              <PixivLeftLink path="/" icon="fa-cog" text="设置"/>
-            </li>
-          </ul>
+class Toolbar extends React.Component {
+  render() {
+    const { data, onclick } = this.props;
+    let active = '';
+    if(data.status) {
+      active = styles.active;
+    }
+    return (
+      <div className={styles.box+' '+active} onClick={onclick}>
+        <div className={styles.bd}>
+          <div className={styles.mn}>
+            <PixivLeftInfo data={data.userInfo} />
+            <ul className={styles.lst}>
+              {
+                data.navInfo.map((value, index) =>
+                  <li className={styles.li} key={index}>
+                    <PixivLeftLink path={value.path} icon={value.icon} text={value.text}/>
+                  </li>
+                )
+              }
+            </ul>
+            <ul className={styles.lst}>
+              {
+                data.personalNavInfo.map((value, index) =>
+                  <li className={styles.li} key={index}>
+                    <PixivLeftLink path={value.path} icon={value.icon} text={value.text}/>
+                  </li>
+                )
+              }
+            </ul>
+            <ul className={styles.lst}>
+              <li>
+                <PixivLeftTitle title={data.otherNavInfo.title}/>
+              </li>
+              {
+                data.otherNavInfo.node.map((value, index) =>
+                  <li className={styles.li} key={index}>
+                    <PixivLeftLink path={value.path} icon={value.icon} text={value.text}/>
+                  </li>
+                )
+              }
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  )
-};
+    )
+  }
+}
 
 export default Toolbar

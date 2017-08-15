@@ -1,17 +1,30 @@
 .box{
+  overflow: hidden;
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 100%;
+  width: 0;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0);
+  transition: .35s background-color, .0s .35s width;
+}
+.active{
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  transition: .35s background-color, .0s width;
 }
 .bd{
   overflow: auto;
+  position: absolute;
+  left: -77%;
   width: 77%;
   max-width: 400px;
   height: 100%;
   background-color: #fafafa;
+  transition: .35s;
+}
+.active .bd{
+  left: 0;
 }
 .mn{
   width: 100%;

@@ -4,12 +4,13 @@ import img from './../../../../images/user/user-01.png'
 
 export default class PixivLeftInfo extends Component {
   render() {
+    const { data } = this.props;
     return (
       <div className={styles.box}>
         <img className={styles.img} src={img} />
         <div className={styles.text}>
-          <p className={styles.name}>一方0通行</p>
-          <p className={styles.name}>18725944157</p>
+          <p className={styles.name}>{data.name}</p>
+          <p className={styles.name}>{data.phone}</p>
         </div>
       </div>
     )

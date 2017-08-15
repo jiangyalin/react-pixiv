@@ -24,7 +24,6 @@
   height: 100%;
 }
 .li{
-  opacity: .5;
   padding: 14px 0 6px 0;
   float: left;
   width: 52px;
@@ -35,11 +34,16 @@
 .fa{
   font-size: .21rem;
   line-height: .27rem;
+  opacity: .5;
 }
 .nav{
   display: block;
   font-size: .14rem;
+  opacity: .5;
 }
-.active{
+.active .fa{
+  opacity: 1;
+}
+.active .nav{
   opacity: 1;
 }
