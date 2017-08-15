@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Hammer from 'react-hammerjs';
 import styles from './index.scss';
 
 class Nav extends React.Component {
@@ -23,6 +24,11 @@ class Nav extends React.Component {
             </Link>
           </li>
         </ul>
+        <Hammer onTap={() => console.log("p")} onSwipe={(e) => {
+          console.log("k",e)
+        }}>
+          <div className={styles.box}>Tap Me</div>
+        </Hammer>
       </div>
     )
   }
