@@ -6,7 +6,7 @@ import { Nav, HomeNav, Toolbar } from './../components';
 
 class Home extends React.Component {
   render() {
-    const { dataToolbar, onTurnClick, onToolbarMnOpen, onToolbarMnOff, onToolbarMnTap } = this.props;
+    const { dataToolbar, onTurnClick, onToolbarMnOpen, onToolbarMnOff } = this.props;
     return (
       <Hammer>
         <div>
@@ -32,15 +32,10 @@ const mapDispatchToProps = (dispatch) => {
       dispatch(turn);
     },
     onToolbarMnOpen: () => {
-      console.log("pppp")
       dispatch(isMnOpen);
     },
     onToolbarMnOff: () => {
       dispatch(isMnOff);
-    },
-    onToolbarMnTap: () => {
-      dispatch(isMnOff);
-      dispatch(turn);
     }
   }
 };
