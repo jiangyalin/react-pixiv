@@ -4,4 +4,4 @@ import {
 } from './actionsTypes'
 
 export const increaseAction = { type: increase };
-export const cutbackAction = { type: cutback};
+export const cutbackAction = { type: cutback };

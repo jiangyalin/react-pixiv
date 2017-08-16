@@ -1,5 +1,6 @@
 const init = {
   status: false,
+  isMnTap: false,
   userInfo: {
     name: '一方通行',
     phone: '18725944157'
@@ -59,6 +60,21 @@ export default ( state = init, action ) => {
         ...state,
         status: !state.status
       };
+    case 'IS_MN_OPEN':
+      return {
+        ...state,
+        isMnTap: true
+      };
+    case 'IS_MN_OFF':
+      return {
+        ...state,
+        isMnTap: false
+      };
+    // case 'TOOLBAR_MN_TAP':
+    //   return {
+    //     ...state,
+    //     status: false
+    //   };
     default:
       return state
   }
