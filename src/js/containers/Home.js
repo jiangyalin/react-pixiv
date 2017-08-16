@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Hammer from 'react-hammerjs';
 import { turn, isMnOpen, isMnOff } from '../actions/Toolbar';
-import { Nav, HomeNav, Toolbar } from './../components';
+import { Nav, HomeNav, Toolbar, RankingTitle } from './../components';
 
 class Home extends React.Component {
   render() {
@@ -10,9 +10,15 @@ class Home extends React.Component {
     return (
       <Hammer>
         <div>
+          <Toolbar
+            data={dataToolbar}
+            onToolbarMnOff={onToolbarMnOff}
+            onToolbarMnOpen={onToolbarMnOpen}
+            onTurnClick={onTurnClick}
+          />
           <Nav homeClick={onTurnClick}/>
           <HomeNav/>
-          <Toolbar data={dataToolbar} onToolbarMnOff={onToolbarMnOff} onToolbarMnOpen={onToolbarMnOpen} onTurnClick={onTurnClick}/>
+          <RankingTitle/>
         </div>
       </Hammer>
     )
