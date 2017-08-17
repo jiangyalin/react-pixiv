@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Hammer from 'react-hammerjs';
 import { turn, isMnOpen, isMnOff } from '../actions/Toolbar';
-import { Nav, HomeNav, Toolbar, RankingTitle } from './../components';
+import { Nav, HomeNav, Toolbar, RankingTitle, IllustrationTop } from './../components';
 
 class Home extends React.Component {
   render() {
@@ -19,6 +19,7 @@ class Home extends React.Component {
           <Nav homeClick={onTurnClick}/>
           <HomeNav/>
           <RankingTitle/>
+          <IllustrationTop/>
         </div>
       </Hammer>
     )
@@ -35,6 +36,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     onTurnClick: () => {
+      console.log(dispatch);
       dispatch(turn);
     },
     onToolbarMnOpen: () => {

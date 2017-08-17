@@ -1,5 +1,35 @@
 .box{
-  width: 100% ;
-  height: 46px;
+  padding: 8px 14px 0 14px;
+  width: 100%;
+  height: 54px;
   background-color: #fafafa;
+  box-sizing: border-box;
+}
+.diamond{
+  float: left;
+  font-size: 23px;
+  line-height: .46rem;
+  color: #e5a836;
+}
+.tt{
+  float: left;
+  padding-left: 10px;
+  font-size: 14px;
+  line-height: .46rem;
+  color: #3a3a3a;
+}
+.more{
+  float: right;
+  font-size: 12px;
+}
+.p{
+  float: left;
+  padding-right: 10px;
+  color: #717171;
+  line-height: .46rem;
+}
+.angle{
+  float: left;
+  color: #009cff;
+  line-height: .46rem;
 }
