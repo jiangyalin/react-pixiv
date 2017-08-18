@@ -7,12 +7,22 @@ import {
   App,
 } from './containers'
 
-const Routes = ({ store, history }) => (
-    <Router history={history}>
-      <Route exact path="/" component={Home}>
-        <IndexRoute component={Home}/>
-      </Route>
-    </Router>
+let Routes = ({ history }) => (
+  <Router history={history}>
+    <Route exact path="/" component={Home}>
+      <IndexRoute component={Home}/>
+    </Route>
+  </Router>
 );
+
+// const mapStateToProps = (store) => {
+//   return {
+//     store: store
+//   }
+// };
+//
+// Routes = connect(
+//   mapStateToProps
+// )(Routes);
 
 export default Routes;

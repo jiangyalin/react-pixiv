@@ -2,24 +2,16 @@ const init = {
   topX: 0
 };
 
-export default ( state = init, action ) => {
+const illustrationTop = ( state = [], action ) => {
   switch (action.type) {
-    case 'TURN_ON':
-      return {
+    case 'SET_TOP':
+      return{
         ...state,
-        status: !state.status
-      };
-    case 'IS_MN_OPEN':
-      return {
-        ...state,
-        isMnTap: true
-      };
-    case 'IS_MN_OFF':
-      return {
-        ...state,
-        isMnTap: false
+        topX: action.text
       };
     default:
       return state
   }
 };
+
+export default illustrationTop;
