@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Hammer from 'react-hammerjs';
 import { turn, isMnOpen, isMnOff } from '../actions/Toolbar';
-import { Nav, HomeNav, Toolbar, RankingTitle, IllustrationTop } from './../components';
+import { Nav, HomeNav, Toolbar, RankingTitle, IllustrationTop, IllustrationBox, Title } from './../components';
 
 class Home extends React.Component {
   render() {
@@ -28,6 +28,8 @@ class Home extends React.Component {
           <HomeNav/>
           <RankingTitle/>
           <IllustrationTop topX={this.props.illustrationTopX} initX={initX} thisX={thisX} date={date}/>
+          <Title/>
+          <IllustrationBox />
           {this.props.illustrationTopX}
         </div>
       </Hammer>
