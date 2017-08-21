@@ -1,7 +1,19 @@
-let nextTodoId = 0;
+export const setTop = (value) => ({
+  type: 'SET_TOP_X',
+  value
+});
 
-export const setTop = (text) => ({
-  type: 'SET_TOP',
-  id: nextTodoId++,
-  text
+export const setInitX = (value) => ({
+  type: 'SET_INIT_X',
+  value
+});
+
+export const setThisX = (value) => ({
+  type: 'SET_THIS_X',
+  value
+});
+
+export const setDate = (value) => ({
+  type: 'SET_DATE',
+  value
 });
