@@ -3,25 +3,22 @@ import { connect } from 'react-redux';
 
 import styles from './index.scss';
 import Illustration from './Illustration';
-import img01 from './../../../images/top/top-01.jpg'
-import img02 from './../../../images/top/top-02.jpg'
-import img03 from './../../../images/top/top-03.jpg'
-import img04 from './../../../images/top/top-04.jpg'
-import img05 from './../../../images/top/top-05.jpg'
+import { setClientWidth } from './../../actions/IllustrationBox';
 
 class IllustrationBox extends React.Component {
-  width = 375;
+  load = () => {
+    this.props.dispatch(setClientWidth(this.refs.box.clientWidth));
+  };
   render() {
     return (
-      <div>
-        <div className={styles.box} style={{width: this.width + 4 + 'px'}} ref="box">
-          <Illustration width={this.width} img={img05}/>
-          <Illustration width={this.width} img={img04}/>
-          <Illustration width={this.width} img={img03}/>
-          <Illustration width={this.width} img={img02}/>
-          <Illustration width={this.width} img={img01}/>
+      <div ref="box" onLoad={this.load}>
+        <div className={styles.box} style={{width: this.props.illustrationBox.clientWidth + 4 + 'px'}}>
+          {
+            this.props.illustrationBox.Illustrations.map((data, index) =>
+              <Illustration key={index} width={this.props.illustrationBox.clientWidth} clientWidth={this.props.illustrationBox.clientWidth} img={data.image} count={data.count} width={data.width} height={data.height}/>
+            )
+          }
         </div>
-        {console.log(this.refs.box)}
       </div>
     )
   }

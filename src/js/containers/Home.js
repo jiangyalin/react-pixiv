@@ -6,7 +6,7 @@ import { Nav, HomeNav, Toolbar, RankingTitle, IllustrationTop, IllustrationBox, 
 
 class Home extends React.Component {
   render() {
-    const { dataToolbar, initX, thisX, date } = this.props;
+    const { dataToolbar, initX, thisX, date, illustrationBox } = this.props;
     return (
       <Hammer>
         <div>
@@ -29,7 +29,7 @@ class Home extends React.Component {
           <RankingTitle/>
           <IllustrationTop topX={this.props.illustrationTopX} initX={initX} thisX={thisX} date={date}/>
           <Title/>
-          <IllustrationBox />
+          <IllustrationBox illustrationBox={illustrationBox}/>
           {this.props.illustrationTopX}
         </div>
       </Hammer>
@@ -46,9 +46,11 @@ const mapStateToProps = (store, ownProps) => {
     thisX: store.illustrationTop.thisX,
     date: store.illustrationTop.transitionDate,
     store: store,
-    ownProps: ownProps
+    ownProps: ownProps,
+    illustrationBox: store.illustrationBox
   }
 };
+
 Home = connect(
   mapStateToProps
 )(Home);

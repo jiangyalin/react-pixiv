@@ -27,13 +27,13 @@ class IllustrationTop extends React.Component {
       let count = 0;
       const isRight = this.props.initX - e.center.x > 0;
       if (isRight) {
-        count = Math.floor(this.props.topX / 263);
+        count = Math.floor(this.props.topX / 264);
       } else{
-        count = Math.ceil(this.props.topX / 263);
+        count = Math.ceil(this.props.topX / 264);
       }
-      let date = Math.abs((count * 263 - this.props.topX) / 263) * .5;
+      let date = Math.abs((count * 264 - this.props.topX) / 264) * .5;
       this.props.dispatch(setDate(date));
-      this.props.dispatch(setTop(count*263));
+      this.props.dispatch(setTop(count*264));
     };
     return (
       <Hammer onPanStart={PanStart} onPan={Pan} onPanEnd={PanEnd}>
