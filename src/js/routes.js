@@ -1,5 +1,4 @@
 import React from 'react'
-import { Provider, connect } from 'react-redux';
 import { Router, Route, IndexRoute } from 'react-router'
 
 import {
@@ -9,20 +8,10 @@ import {
 
 let Routes = ({ history }) => (
   <Router history={history}>
-    <Route exact path="/" component={Home}>
-      <IndexRoute component={Home}/>
+    <Route exact path="/" component={App}>
+      <IndexRoute component={App}/>
     </Route>
   </Router>
 );
-
-// const mapStateToProps = (store) => {
-//   return {
-//     store: store
-//   }
-// };
-//
-// Routes = connect(
-//   mapStateToProps
-// )(Routes);
 
 export default Routes;

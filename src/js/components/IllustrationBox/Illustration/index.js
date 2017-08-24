@@ -7,7 +7,7 @@ import { setClientWidth, setImgWidth } from './../../../actions/IllustrationBox'
 class Illustration extends React.Component {
   ImgLoad = () => {
     console.log(this)
-    this.props.dispatch(setImgWidth(2100));
+    this.props.dispatch(setImgWidth(800));
     this.img(this.props.img,this.props.width / 2 - 2,this.props.width / 2 - 2)
   };
   img = (src, width, height) => {

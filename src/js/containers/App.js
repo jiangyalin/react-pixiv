@@ -1,28 +1,31 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { increaseAction, cutbackAction } from '../actions/cs'
+import { increaseAction, editCs } from '../actions/cs'
 import { Cs } from './../components'
 
 class App extends React.Component {
+  click = () => {
+    this.props.dispatch(increaseAction({text: 'hhhh'}));
+    console.log('this',this.props.value.cs)
+  };
+  setSet = () => {
+    this.props.dispatch(editCs(0,'tt'));
+  };
   render() {
-    const { value, onIncreaseClick } = this.props;
     return (
       <div>
-        <Cs value={value} onclick1={onIncreaseClick}/>
+        {console.log('value',this.props.value.cs)}
+        <button type="button" onClick={this.click}>++++++</button>
+        <button type="button" onClick={this.setSet}>setSetSet</button>
       </div>
     )
   }
 }
 
-App.propTypes = {
-  value: PropTypes.number.isRequired,
-  onIncreaseClick: PropTypes.func.isRequired
-};
-
 const mapStateToProps = (state) => {
   return {
-    value: state.count
+    value: state
   }
 };
 
@@ -34,5 +37,5 @@ const mapDispatchTo = (dispatch) => {
 
 export default connect(
   mapStateToProps,
-  mapDispatchTo
+  // mapDispatchTo
 )(App)
