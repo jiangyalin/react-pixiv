@@ -1,3 +1,11 @@
+import {
+  ILLUSTRATION_TOP_SET_TOP_X,
+  ILLUSTRATION_TOP_SET_INIT_X,
+  ILLUSTRATION_TOP_SET_THIS_X,
+  ILLUSTRATION_TOP_SET_DATE,
+  ILLUSTRATION_TOP_SET_IMG_SIZE
+} from './../actions/actionsTypes';
+
 import img01 from './../../images/top/top-01.jpg'
 import img02 from './../../images/top/top-02.jpg'
 import img03 from './../../images/top/top-03.jpg'
@@ -69,27 +77,27 @@ const init = {
 
 const illustrationTop = ( state = init, action ) => {
   switch (action.type) {
-    case 'SET_TOP_X':
+    case ILLUSTRATION_TOP_SET_TOP_X:
       return{
         ...state,
         topX: action.value
       };
-    case 'SET_INIT_X':
+    case ILLUSTRATION_TOP_SET_INIT_X:
       return{
         ...state,
         initX: action.value
       };
-    case 'SET_THIS_X':
+    case ILLUSTRATION_TOP_SET_THIS_X:
       return{
         ...state,
         thisX: action.value
       };
-    case 'SET_DATE':
+    case ILLUSTRATION_TOP_SET_DATE:
       return{
         ...state,
         transitionDate: action.value
       };
-    case 'SET_IMG_SIZE':
+    case ILLUSTRATION_TOP_SET_IMG_SIZE:
       let elements = state.elements.map(data =>
         data.id == action.id ?
         {

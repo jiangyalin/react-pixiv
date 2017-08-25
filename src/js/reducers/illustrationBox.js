@@ -1,3 +1,8 @@
+import {
+  ILLUSTRATION_BOX_SET_CLIENT_WIDTH,
+  ILLUSTRATION_BOX_SET_IMG_SIZE
+} from './../actions/actionsTypes';
+
 import img01 from './../../images/top/top-01.jpg'
 import img02 from './../../images/top/top-02.jpg'
 import img03 from './../../images/top/top-03.jpg'
@@ -7,31 +12,31 @@ import img05 from './../../images/top/top-05.jpg'
 const init = {
   clientWidth: 640,
   Illustrations: [{
-    id: 1,
+    id: 11,
     image: img01,
     count: 4,
     width: 0,
     height: 0
   },{
-    id: 2,
+    id: 12,
     image: img02,
     count: 1,
     width: 0,
     height: 0
   },{
-    id: 3,
+    id: 13,
     image: img03,
     count: 1,
     width: 0,
     height: 0
   },{
-    id: 4,
+    id: 14,
     image: img04,
     count: 1,
     width: 0,
     height: 0
   },{
-    id: 5,
+    id: 15,
     image: img05,
     count: 1,
     width: 0,
@@ -41,12 +46,12 @@ const init = {
 
 const illustrationBox = ( state = init, action ) => {
   switch (action.type) {
-    case 'SET_CLIENT_WIDTH':
+    case ILLUSTRATION_BOX_SET_CLIENT_WIDTH:
       return{
         ...state,
         clientWidth: action.value
       };
-    case 'SET_IMG_SIZE':
+    case ILLUSTRATION_BOX_SET_IMG_SIZE:
       let Illustrations = state.Illustrations.map(data =>
         data.id == action.id ?
         {

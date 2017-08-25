@@ -1,3 +1,9 @@
+import {
+  TOOLBAR_TURN_ON,
+  TOOLBAR_IS_MN_OPEN,
+  TOOLBAR_IS_MN_OFF
+} from './../actions/actionsTypes'
+
 const init = {
   status: false,
   isMnTap: false,
@@ -55,26 +61,21 @@ const init = {
 
 export default ( state = init, action ) => {
   switch (action.type) {
-    case 'TURN_ON':
+    case TOOLBAR_TURN_ON:
       return {
         ...state,
         status: !state.status
       };
-    case 'IS_MN_OPEN':
+    case TOOLBAR_IS_MN_OPEN:
       return {
         ...state,
         isMnTap: true
       };
-    case 'IS_MN_OFF':
+    case TOOLBAR_IS_MN_OFF:
       return {
         ...state,
         isMnTap: false
       };
-    // case 'TOOLBAR_MN_TAP':
-    //   return {
-    //     ...state,
-    //     status: false
-    //   };
     default:
       return state
   }

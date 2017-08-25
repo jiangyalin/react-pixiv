@@ -1,25 +1,33 @@
+import {
+  ILLUSTRATION_TOP_SET_TOP_X,
+  ILLUSTRATION_TOP_SET_INIT_X,
+  ILLUSTRATION_TOP_SET_THIS_X,
+  ILLUSTRATION_TOP_SET_DATE,
+  ILLUSTRATION_TOP_SET_IMG_SIZE
+} from './actionsTypes';
+
 export const setTop = (value) => ({
-  type: 'SET_TOP_X',
+  type: ILLUSTRATION_TOP_SET_TOP_X,
   value
 });
 
 export const setInitX = (value) => ({
-  type: 'SET_INIT_X',
+  type: ILLUSTRATION_TOP_SET_INIT_X,
   value
 });
 
 export const setThisX = (value) => ({
-  type: 'SET_THIS_X',
+  type: ILLUSTRATION_TOP_SET_THIS_X,
   value
 });
 
 export const setDate = (value) => ({
-  type: 'SET_DATE',
+  type: ILLUSTRATION_TOP_SET_DATE,
   value
 });
 
 export const setImgSize = (id, width, height) => ({
-  type: 'SET_IMG_SIZE',
+  type: ILLUSTRATION_TOP_SET_IMG_SIZE,
   id: id,
   width: width,
   height: height

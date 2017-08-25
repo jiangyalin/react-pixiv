@@ -12,10 +12,14 @@ class Illustration extends React.Component {
     let image = new Image();
     image.src = src;
     if(image.width / width > image.height / height){
+      // console.log("pp1p");
+      // console.log("kkkk"+this.props.id+"kkk", (this.props.clientHeight / 2 - 2) * image.width / image.height);
+      // console.log("pp2p");
       this.props.dispatch(setImgSize(this.props.id, (this.props.clientHeight / 2 - 2) * image.width / image.height, this.props.clientHeight / 2 - 2));
     }else{
       this.props.dispatch(setImgSize(this.props.id, this.props.clientWidth / 2 - 2, (this.props.clientWidth / 2 - 2) * image.height / image.width));
     }
+    // console.log("kkkk"+this.props.id+"kkk", this.props.clientWidth / 2 - 2);
   };
   render() {
     let count = '';
@@ -27,9 +31,13 @@ class Illustration extends React.Component {
     }
     return (
       <div className={styles.box} style={{width: this.props.clientWidth / 2 - 2 + 'px',height: this.props.clientHeight / 2 - 2 + 'px'}}>
-        <img className={styles.img} src={this.props.img} style={{width: this.props.width + 'px',height: this.props.height + 'px'}} onLoad={this.ImgLoad} ref="img"/>
+        <img
+          className={styles.img}
+          src={this.props.img}
+          style={{width: this.props.width + 'px',height: this.props.height + 'px'}}
+          onLoad={this.ImgLoad}/>
         <div className={styles.heart}>
-          <div className={styles.heart_mn}></div>
+          <div className={styles.heart_mn}>{this.props.id}</div>
         </div>
         {count}
       </div>
