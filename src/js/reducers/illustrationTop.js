@@ -24,6 +24,7 @@ const init = {
     width: 0,
     height: 0,
     name: '作品1',
+    collection: false,
     user: {
       name: '作者1',
       userImg: img03
@@ -35,6 +36,7 @@ const init = {
     width: 0,
     height: 0,
     name: '作品2',
+    collection: false,
     user: {
       name: '作者2',
       userImg: img04
@@ -46,6 +48,7 @@ const init = {
     width: 0,
     height: 0,
     name: '作品3',
+    collection: false,
     user: {
       name: '作者3',
       userImg: img05
@@ -57,6 +60,7 @@ const init = {
     width: 0,
     height: 0,
     name: '作品4',
+    collection: false,
     user: {
       name: '作者4',
       userImg: img01
@@ -68,6 +72,7 @@ const init = {
     width: 0,
     height: 0,
     name: '作品5',
+    collection: false,
     user: {
       name: '作者5',
       userImg: img02

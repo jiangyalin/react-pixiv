@@ -16,31 +16,36 @@ const init = {
     image: img01,
     count: 4,
     width: 0,
-    height: 0
+    height: 0,
+    collection: false
   },{
     id: 12,
     image: img02,
     count: 1,
     width: 0,
-    height: 0
+    height: 0,
+    collection: false
   },{
     id: 13,
     image: img03,
     count: 1,
     width: 0,
-    height: 0
+    height: 0,
+    collection: false
   },{
     id: 14,
     image: img04,
     count: 1,
     width: 0,
-    height: 0
+    height: 0,
+    collection: false
   },{
     id: 15,
     image: img05,
     count: 1,
     width: 0,
-    height: 0
+    height: 0,
+    collection: false
   }]
 };
 
