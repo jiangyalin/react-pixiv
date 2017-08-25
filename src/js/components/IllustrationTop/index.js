@@ -5,11 +5,6 @@ import Hammer from 'react-hammerjs';
 import Element from './Element';
 import styles from './index.scss';
 import { setTop, setInitX, setThisX, setDate } from '../../actions/IllustrationTop';
-import img01 from './../../../images/top/top-01.jpg'
-import img02 from './../../../images/top/top-02.jpg'
-import img03 from './../../../images/top/top-03.jpg'
-import img04 from './../../../images/top/top-04.jpg'
-import img05 from './../../../images/top/top-05.jpg'
 
 class IllustrationTop extends React.Component {
   render() {
@@ -39,11 +34,17 @@ class IllustrationTop extends React.Component {
       <Hammer onPanStart={PanStart} onPan={Pan} onPanEnd={PanEnd}>
         <div className={styles.box} ref="box">
           <div className={styles.mn} style={{transform: 'translate3d(' + this.props.topX + 'px,0px,0px)',transition: + this.props.date + 's'}} ref="mn">
-            <Element img={img01}/>
-            <Element img={img02}/>
-            <Element img={img03}/>
-            <Element img={img04}/>
-            <Element img={img05}/>
+            {
+              this.props.image.map((data, index) =>
+                <Element
+                  key={index}
+                  img={data.image}
+                  count={data.count}
+                  width={data.width}
+                  height={data.height}
+                  id={data.id}/>
+              )
+            }
           </div>
         </div>
       </Hammer>

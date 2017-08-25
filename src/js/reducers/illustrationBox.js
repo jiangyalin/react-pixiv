@@ -10,50 +10,33 @@ const init = {
     id: 1,
     image: img01,
     count: 4,
-    width: 100,
-    height: 100
+    width: 0,
+    height: 0
   },{
     id: 2,
     image: img02,
     count: 1,
-    width: 300,
-    height: 200
+    width: 0,
+    height: 0
   },{
     id: 3,
     image: img03,
     count: 1,
-    width: 100,
-    height: 100
+    width: 0,
+    height: 0
   },{
     id: 4,
     image: img04,
     count: 1,
-    width: 100,
-    height: 100
+    width: 0,
+    height: 0
   },{
     id: 5,
     image: img05,
     count: 1,
-    width: 100,
-    height: 100
+    width: 0,
+    height: 0
   }]
-};
-
-const illustrationBoxB = ( state, action ) => {
-  switch (action.type) {
-    case 'SET_CLIENT_WIDTH':
-      return{
-        ...state,
-        clientWidth: action.value
-      };
-    case 'SET_IMG_WIDTH':
-      return {
-        ...state,
-        width: 200
-      };
-    default:
-      return state
-  }
 };
 
 const illustrationBox = ( state = init, action ) => {
@@ -63,14 +46,19 @@ const illustrationBox = ( state = init, action ) => {
         ...state,
         clientWidth: action.value
       };
-    case 'SET_IMG_WIDTH':
-      return state.Illustrations.map(data =>
-        illustrationBoxB(data, action)
+    case 'SET_IMG_SIZE':
+      let Illustrations = state.Illustrations.map(data =>
+        data.id == action.id ?
+        {
+          ...data,
+          width: action.width,
+          height: action.height
+        }: data
       );
-      // return{
-      //   ...state.Illustrations[3],
-      //   width: action.width
-      // };
+      return {
+        ...state,
+        Illustrations: Illustrations
+      };
     default:
       return state
   }

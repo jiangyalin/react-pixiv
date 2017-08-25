@@ -15,7 +15,15 @@ class IllustrationBox extends React.Component {
         <div className={styles.box} style={{width: this.props.illustrationBox.clientWidth + 4 + 'px'}}>
           {
             this.props.illustrationBox.Illustrations.map((data, index) =>
-              <Illustration key={index} width={this.props.illustrationBox.clientWidth} clientWidth={this.props.illustrationBox.clientWidth} img={data.image} count={data.count} width={data.width} height={data.height}/>
+              <Illustration
+                key={index}
+                clientWidth={this.props.illustrationBox.clientWidth}
+                clientHeight={this.props.illustrationBox.clientWidth}
+                img={data.image}
+                count={data.count}
+                width={data.width}
+                height={data.height}
+                id={data.id}/>
             )
           }
         </div>

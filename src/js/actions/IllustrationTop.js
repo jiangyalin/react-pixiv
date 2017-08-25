@@ -17,3 +17,10 @@ export const setDate = (value) => ({
   type: 'SET_DATE',
   value
 });
+
+export const setImgSize = (id, width, height) => ({
+  type: 'SET_IMG_SIZE',
+  id: id,
+  width: width,
+  height: height
+});

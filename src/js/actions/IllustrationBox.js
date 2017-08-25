@@ -3,7 +3,9 @@ export const setClientWidth = (value) => ({
   value
 });
 
-export const setImgWidth = (width) => ({
-  type: 'SET_IMG_WIDTH',
-  width
+export const setImgSize = (id, width, height) => ({
+  type: 'SET_IMG_SIZE',
+  id: id,
+  width: width,
+  height: height
 });
