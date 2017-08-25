@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux'
 import cs from './cs';
-import toolber from './toolber';
+import toolbar from './toolbar';
 import illustrationTop from './illustrationTop';
 import illustrationBox from './illustrationBox';
 
 const rootReducer = combineReducers({
   cs,
-  toolber,
+  toolbar,
   illustrationTop,
   illustrationBox
 });
