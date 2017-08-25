@@ -18,10 +18,32 @@ class Element extends React.Component {
     }
   };
   render() {
-    const { img } = this.props;
+    let count = '';
+    if(this.props.count > 1) {
+      count = <div className={styles.count}>
+        <i className={"fa fa-clone " + styles.clone}/>
+        <span className={styles.sn}>{this.props.count}</span>
+      </div>;
+    }
+    const { img, user, name } = this.props;
     return (
       <div className={styles.box}>
-        <img className={styles.img} src={img}  style={{width: this.props.width + 'px',height: this.props.height + 'px'}} onLoad={this.ImgLoad}/>
+        <img
+          className={styles.img}
+          src={img}
+          style={{width: this.props.width + 'px',height: this.props.height + 'px'}}
+          onLoad={this.ImgLoad}/>
+        <div className={styles.info}>
+          <p className={styles.name}>{name}</p>
+          <div className={styles.user}>
+            <img className={styles.user_img} src={user.userImg}/>
+            <p className={styles.user_name}>{user.name}</p>
+          </div>
+        </div>
+        <div className={styles.heart}>
+          <div className={styles.heart_mn}></div>
+        </div>
+        {count}
       </div>
     )
   }

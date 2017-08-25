@@ -35,14 +35,16 @@ class IllustrationTop extends React.Component {
         <div className={styles.box} ref="box">
           <div className={styles.mn} style={{transform: 'translate3d(' + this.props.topX + 'px,0px,0px)',transition: + this.props.date + 's'}} ref="mn">
             {
-              this.props.image.map((data, index) =>
+              this.props.illustrationTopData.elements.map((data, index) =>
                 <Element
                   key={index}
                   img={data.image}
                   count={data.count}
                   width={data.width}
                   height={data.height}
-                  id={data.id}/>
+                  name={data.name}
+                  id={data.id}
+                  user={data.user}/>
               )
             }
           </div>

@@ -14,31 +14,56 @@ const init = {
     image: img01,
     count: 1,
     width: 0,
-    height: 0
+    height: 0,
+    name: '作品1',
+    user: {
+      name: '作者1',
+      userImg: img03
+    }
   },{
     id: 1,
     image: img02,
     count: 4,
     width: 0,
-    height: 0
+    height: 0,
+    name: '作品2',
+    user: {
+      name: '作者2',
+      userImg: img04
+    }
   },{
     id: 2,
     image: img03,
     count: 1,
     width: 0,
-    height: 0
+    height: 0,
+    name: '作品3',
+    user: {
+      name: '作者3',
+      userImg: img05
+    }
   },{
     id: 3,
     image: img04,
     count: 1,
     width: 0,
-    height: 0
+    height: 0,
+    name: '作品4',
+    user: {
+      name: '作者4',
+      userImg: img01
+    }
   },{
     id: 4,
     image: img05,
     count: 1,
     width: 0,
-    height: 0
+    height: 0,
+    name: '作品5',
+    user: {
+      name: '作者5',
+      userImg: img02
+    }
   }]
 };
 
