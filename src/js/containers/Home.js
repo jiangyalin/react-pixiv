@@ -38,7 +38,7 @@ class Home extends React.Component {
 
 const mapStateToProps = (store, ownProps) => {
   return {
-    dataToolbar: store.toolber,
+    dataToolbar: store.toolbar,
     illustrationBox: store.illustrationBox,
     illustrationTopData: store.illustrationTop
   }
