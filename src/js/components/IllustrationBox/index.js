@@ -23,6 +23,7 @@ class IllustrationBox extends React.Component {
                 count={data.count}
                 width={data.width}
                 height={data.height}
+                collection={data.collection}
                 id={data.id}/>
             )
           }

@@ -3,7 +3,8 @@ import {
   ILLUSTRATION_TOP_SET_INIT_X,
   ILLUSTRATION_TOP_SET_THIS_X,
   ILLUSTRATION_TOP_SET_DATE,
-  ILLUSTRATION_TOP_SET_IMG_SIZE
+  ILLUSTRATION_TOP_SET_IMG_SIZE,
+  ILLUSTRATION_TOP_COLLECTION
 } from './../actions/actionsTypes';
 
 import img01 from './../../images/top/top-01.jpg'
@@ -114,6 +115,18 @@ const illustrationTop = ( state = init, action ) => {
       return {
         ...state,
         elements: elements
+      };
+    case ILLUSTRATION_TOP_COLLECTION:
+      let elements_2 = state.elements.map(data =>
+        data.id == action.id ?
+        {
+          ...data,
+          collection: action.collection
+        }: data
+      );
+      return {
+        ...state,
+        elements: elements_2
       };
     default:
       return state

@@ -3,7 +3,8 @@ import {
   ILLUSTRATION_TOP_SET_INIT_X,
   ILLUSTRATION_TOP_SET_THIS_X,
   ILLUSTRATION_TOP_SET_DATE,
-  ILLUSTRATION_TOP_SET_IMG_SIZE
+  ILLUSTRATION_TOP_SET_IMG_SIZE,
+  ILLUSTRATION_TOP_COLLECTION
 } from './actionsTypes';
 
 export const setTop = (value) => ({
@@ -31,4 +32,10 @@ export const setImgSize = (id, width, height) => ({
   id: id,
   width: width,
   height: height
+});
+
+export const setCollection = (id, collection) => ({
+  type: ILLUSTRATION_TOP_COLLECTION,
+  id: id,
+  collection: collection
 });

@@ -1,6 +1,7 @@
 import {
   ILLUSTRATION_BOX_SET_CLIENT_WIDTH,
-  ILLUSTRATION_BOX_SET_IMG_SIZE
+  ILLUSTRATION_BOX_SET_IMG_SIZE,
+  ILLUSTRATION_BOX_COLLECTION
 } from './../actions/actionsTypes';
 
 import img01 from './../../images/top/top-01.jpg'
@@ -24,7 +25,7 @@ const init = {
     count: 1,
     width: 0,
     height: 0,
-    collection: false
+    collection: true
   },{
     id: 13,
     image: img03,
@@ -68,6 +69,18 @@ const illustrationBox = ( state = init, action ) => {
       return {
         ...state,
         Illustrations: Illustrations
+      };
+    case ILLUSTRATION_BOX_COLLECTION:
+      let Illustrations_2 = state.Illustrations.map(data =>
+        data.id == action.id ?
+        {
+          ...data,
+          collection: action.collection
+        }: data
+      );
+      return {
+        ...state,
+        Illustrations: Illustrations_2
       };
     default:
       return state

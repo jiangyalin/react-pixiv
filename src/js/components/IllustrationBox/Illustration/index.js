@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import styles from './index.scss';
-import { setImgSize } from './../../../actions/IllustrationBox';
+import { setImgSize, setCollection } from './../../../actions/IllustrationBox';
 
 class Illustration extends React.Component {
   ImgLoad = () => {
@@ -12,14 +12,13 @@ class Illustration extends React.Component {
     let image = new Image();
     image.src = src;
     if(image.width / width > image.height / height){
-      // console.log("pp1p");
-      // console.log("kkkk"+this.props.id+"kkk", (this.props.clientHeight / 2 - 2) * image.width / image.height);
-      // console.log("pp2p");
       this.props.dispatch(setImgSize(this.props.id, (this.props.clientHeight / 2 - 2) * image.width / image.height, this.props.clientHeight / 2 - 2));
     }else{
       this.props.dispatch(setImgSize(this.props.id, this.props.clientWidth / 2 - 2, (this.props.clientWidth / 2 - 2) * image.height / image.width));
     }
-    // console.log("kkkk"+this.props.id+"kkk", this.props.clientWidth / 2 - 2);
+  };
+  Collection = () => {
+    this.props.dispatch(setCollection(this.props.id, !this.props.collection))
   };
   render() {
     let count = '';
@@ -29,6 +28,13 @@ class Illustration extends React.Component {
                 <span className={styles.sn}>{this.props.count}</span>
               </div>;
     }
+    const isHeart = this.props.collection;
+    let heartStyle = '';
+    if (isHeart) {
+      heartStyle = styles.heart_mn_active;
+    } else {
+      heartStyle = styles.heart_mn;
+    }
     return (
       <div className={styles.box} style={{width: this.props.clientWidth / 2 - 2 + 'px',height: this.props.clientHeight / 2 - 2 + 'px'}}>
         <img
@@ -36,8 +42,8 @@ class Illustration extends React.Component {
           src={this.props.img}
           style={{width: this.props.width + 'px',height: this.props.height + 'px'}}
           onLoad={this.ImgLoad}/>
-        <div className={styles.heart}>
-          <div className={styles.heart_mn}>{this.props.id}</div>
+        <div className={styles.heart} onClick={this.Collection}>
+          <div className={heartStyle}></div>
         </div>
         {count}
       </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import styles from './index.scss';
-import { setImgSize } from './../../../actions/IllustrationTop';
+import { setImgSize, setCollection } from './../../../actions/IllustrationTop';
 
 class Element extends React.Component {
   ImgLoad = () => {
@@ -17,6 +17,9 @@ class Element extends React.Component {
       this.props.dispatch(setImgSize(this.props.id, 250, 250 * image.height / image.width));
     }
   };
+  Collection = () => {
+    this.props.dispatch(setCollection(this.props.id, !this.props.collection))
+  };
   render() {
     let count = '';
     if(this.props.count > 1) {
@@ -25,7 +28,14 @@ class Element extends React.Component {
         <span className={styles.sn}>{this.props.count}</span>
       </div>;
     }
-    const { img, user, name } = this.props;
+    const { img, user, name, collection } = this.props;
+    const isHeart = collection;
+    let heartStyle = '';
+    if (isHeart) {
+      heartStyle = styles.heart_mn_active;
+    } else {
+      heartStyle = styles.heart_mn;
+    }
     return (
       <div className={styles.box}>
         <img
@@ -41,7 +51,7 @@ class Element extends React.Component {
           </div>
         </div>
         <div className={styles.heart}>
-          <div className={styles.heart_mn}></div>
+          <div className={heartStyle} onClick={this.Collection}></div>
         </div>
         {count}
       </div>
