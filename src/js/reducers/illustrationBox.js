@@ -4,11 +4,12 @@ import {
   ILLUSTRATION_BOX_COLLECTION
 } from './../actions/actionsTypes';
 
-import img01 from './../../images/top/top-01.jpg'
-import img02 from './../../images/top/top-02.jpg'
-import img03 from './../../images/top/top-03.jpg'
-import img04 from './../../images/top/top-04.jpg'
-import img05 from './../../images/top/top-05.jpg'
+import img01 from './../../images/illustration/img-01.jpg'
+import img02 from './../../images/illustration/img-02.jpg'
+import img03 from './../../images/illustration/img-03.png'
+import img04 from './../../images/illustration/img-04.jpg'
+import img05 from './../../images/illustration/img-05.png'
+import img06 from './../../images/illustration/img-06.png'
 
 const init = {
   clientWidth: 640,
@@ -43,6 +44,13 @@ const init = {
   },{
     id: 15,
     image: img05,
+    count: 1,
+    width: 0,
+    height: 0,
+    collection: false
+  },{
+    id: 16,
+    image: img06,
     count: 1,
     width: 0,
     height: 0,

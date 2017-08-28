@@ -6,5 +6,3 @@ export { default as RankingTitle } from './RankingTitle'
 export { default as IllustrationTop } from './IllustrationTop'
 export { default as IllustrationBox } from './IllustrationBox'
 export { default as Title } from './Title'
-
-export { default as Cs } from './Cs'

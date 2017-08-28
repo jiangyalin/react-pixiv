@@ -1,14 +1,14 @@
 import { combineReducers } from 'redux'
-import cs from './cs';
 import toolbar from './toolbar';
 import illustrationTop from './illustrationTop';
 import illustrationBox from './illustrationBox';
+import homeNav from './homeNav';
 
 const rootReducer = combineReducers({
-  cs,
   toolbar,
   illustrationTop,
-  illustrationBox
+  illustrationBox,
+  homeNav
 });
 
 export default rootReducer;

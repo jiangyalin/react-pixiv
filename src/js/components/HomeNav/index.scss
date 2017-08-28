@@ -7,6 +7,11 @@
   background-color: #fff;
   box-shadow: 0 2px 2px #ccc;
 }
+.box_active{
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 .lst{
   display: flex;
   width: 100%;

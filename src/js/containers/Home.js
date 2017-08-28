@@ -6,7 +6,7 @@ import { Nav, HomeNav, Toolbar, RankingTitle, IllustrationTop, IllustrationBox, 
 
 class Home extends React.Component {
   render() {
-    const { dataToolbar, illustrationBox, illustrationTopData } = this.props;
+    const { dataToolbar, illustrationBox, illustrationTopData, homeNavData } = this.props;
     return (
       <div>
         <Toolbar
@@ -24,7 +24,7 @@ class Home extends React.Component {
         <Nav homeClick={() => {
             this.props.dispatch(turn)
           }}/>
-        <HomeNav/>
+        <HomeNav homeNavData={homeNavData}/>
         <RankingTitle/>
         <IllustrationTop illustrationTopData={illustrationTopData}/>
         <Title/>
@@ -38,7 +38,8 @@ const mapStateToProps = (store, ownProps) => {
   return {
     dataToolbar: store.toolbar,
     illustrationBox: store.illustrationBox,
-    illustrationTopData: store.illustrationTop
+    illustrationTopData: store.illustrationTop,
+    homeNavData: store.homeNav
   }
 };
 
