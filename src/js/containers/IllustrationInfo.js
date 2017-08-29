@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { InfoNav, IllustrationInfoBox } from '../components'
 
 class IllustrationInfo extends React.Component {
   render() {
     return (
       <div>
-        <h1>asdklfjasdlkfjasdlkfjasdklf</h1>
+        <InfoNav/>
+        <IllustrationInfoBox/>
       </div>
     )
   }
