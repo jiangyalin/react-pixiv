@@ -1,15 +1,56 @@
-.return{
+.box{
+  position: fixed;
   width: 100%;
   height: .95rem;
-  font-size: .5rem;
   color: #fff;
+  font-size: .5rem;
   line-height: .95rem;
 }
-.left{
+.return{
   float: left;
+  width: .95rem;
+  height: .95rem;
+}
+.angle{
   width: .95rem;
   height: 100%;
   line-height: .95rem;
   text-align: center;
   text-shadow: 0 0 0.1rem rgba(0,0,0,.5);
+}
+.share_mn{
+  float: right;
+  width: .95rem;
+  height: .95rem;
+  font-size: .31rem;
+}
+.ellipsis{
+  width: .95rem;
+  height: 100%;
+  line-height: .95rem;
+  text-align: center;
+  text-shadow: 0 0 0.1rem rgba(0,0,0,.5);
+}
+.share{
+  width: .95rem;
+  height: 100%;
+  line-height: .95rem;
+  text-align: center;
+  text-shadow: 0 0 0.1rem rgba(0,0,0,.5);
+}
+.shield{
+  position: absolute;
+  top: 0;
+  right: .07rem;
+  width: 3.49rem;
+  height: .86rem;
+  font-size: .26rem;
+  color: #69606d;
+  line-height: .86rem;
+  border-radius: .04rem;
+  background-color: #fff;
+  box-shadow: 0 0 .3rem rgba(0,0,0,.3);
+}
+.text{
+  text-indent: 1em;
 }

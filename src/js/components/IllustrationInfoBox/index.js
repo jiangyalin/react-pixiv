@@ -5,12 +5,17 @@ import styles from './index.scss';
 
 class IllustrationInfoBox extends React.Component {
   render() {
+    const { infoBoxData } = this.props;
     return (
       <div className={styles.box}>
         <ul className={styles.list}>
-          <li className={styles.li}>
-            <img className={styles.img} src=""/>
-          </li>
+          {
+            infoBoxData.map((data, index) =>
+              <li className={styles.li} key={index}>
+                <img className={styles.img} src={data.image}/>
+              </li>
+            )
+          }
         </ul>
       </div>
     )

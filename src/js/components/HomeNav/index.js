@@ -22,7 +22,7 @@ class Nav extends React.Component {
     };
 
     window.addEventListener('scroll', function () {
-      // console.log("kkk");
+      // g-mn("kkk");
       // if (data.homeNavData.scrollTop != getScrollTop()) {
           // data.dispatch(setScrollTop(getScrollTop()));
       // }

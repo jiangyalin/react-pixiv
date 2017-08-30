@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 import styles from './index.scss';
 import { setImgSize, setCollection } from './../../../actions/IllustrationBox';
@@ -36,7 +37,7 @@ class Illustration extends React.Component {
       heartStyle = styles.heart_mn;
     }
     return (
-      <div className={styles.box} style={{width: this.props.clientWidth / 2 - 2 + 'px',height: this.props.clientHeight / 2 - 2 + 'px'}}>
+      <Link className={styles.box} to={'/' + this.props.id} style={{width: this.props.clientWidth / 2 - 2 + 'px',height: this.props.clientHeight / 2 - 2 + 'px'}}>
         <img
           className={styles.img}
           src={this.props.img}
@@ -46,7 +47,7 @@ class Illustration extends React.Component {
           <div className={heartStyle}></div>
         </div>
         {count}
-      </div>
+      </Link>
     )
   }
 }

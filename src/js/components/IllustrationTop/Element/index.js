@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router';
 
 import styles from './index.scss';
 import { setImgSize, setCollection } from './../../../actions/IllustrationTop';
@@ -37,7 +38,7 @@ class Element extends React.Component {
       heartStyle = styles.heart_mn;
     }
     return (
-      <div className={styles.box}>
+      <Link className={styles.box} to={'/' + this.props.id}>
         <img
           className={styles.img}
           src={img}
@@ -54,7 +55,7 @@ class Element extends React.Component {
           <div className={heartStyle} onClick={this.Collection}></div>
         </div>
         {count}
-      </div>
+      </Link>
     )
   }
 }
