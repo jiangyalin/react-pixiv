@@ -13,6 +13,7 @@ let Routes = ({ history }) => (
       <IndexRoute component={Home}/>
       <Route path=":id" component={IllustrationInfo}/>
     </Route>
+    <Route path="*" component={Home}/>
   </Router>
 );
 

@@ -4,9 +4,11 @@
   "author": "yalin.jiang",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
     "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
-    "deploy": "webpack -p --config webpack.production.config.js"
+    "deploy": "webpack -p --config webpack-pro-config.js",
+    "clean": "rimraf dist",
+    "build:webpack": "webpack --config webpack-pro-config.js --progress --colors",
+    "build": "webpack -p --config webpack-pro-config.js"
   },
   "dependencies": {
     "babel-preset-stage-0": "^6.24.1",
