@@ -2,7 +2,6 @@
 
 pixiv app 基于react全家桶
 
--
 运行方法
 
 (当前默认你已安装 node npm webpack, 如没有安装请查看相关文档)
