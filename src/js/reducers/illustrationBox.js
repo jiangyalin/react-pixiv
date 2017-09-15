@@ -10,6 +10,10 @@ import img03 from './../../images/illustration/img-03.png'
 import img04 from './../../images/illustration/img-04.jpg'
 import img05 from './../../images/illustration/img-05.png'
 import img06 from './../../images/illustration/img-06.png'
+import img07 from './../../images/illustration/img-07.png'
+import img08 from './../../images/illustration/img-08.png'
+import img09 from './../../images/illustration/img-09.png'
+import img10 from './../../images/illustration/img-10.png'
 
 const init = {
   clientWidth: 640,
@@ -51,6 +55,34 @@ const init = {
   },{
     id: 16,
     image: img06,
+    count: 1,
+    width: 0,
+    height: 0,
+    collection: false
+  },{
+    id: 17,
+    image: img07,
+    count: 1,
+    width: 0,
+    height: 0,
+    collection: false
+  },{
+    id: 18,
+    image: img08,
+    count: 1,
+    width: 0,
+    height: 0,
+    collection: false
+  },{
+    id: 19,
+    image: img09,
+    count: 1,
+    width: 0,
+    height: 0,
+    collection: false
+  },{
+    id: 20,
+    image: img10,
     count: 1,
     width: 0,
     height: 0,

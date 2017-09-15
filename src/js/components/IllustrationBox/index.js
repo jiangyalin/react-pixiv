@@ -10,21 +10,23 @@ class IllustrationBox extends React.Component {
     this.props.dispatch(setClientWidth(this.refs.box.clientWidth));
   };
   render() {
+    const { illustrationBox, heartState } = this.props;
     return (
       <div ref="box" onLoad={this.load}>
         <div className={styles.box} style={{width: this.props.illustrationBox.clientWidth + 4 + 'px'}}>
           {
-            this.props.illustrationBox.Illustrations.map((data, index) =>
+            illustrationBox.Illustrations.map((data, index) =>
               <Illustration
                 key={index}
-                clientWidth={this.props.illustrationBox.clientWidth}
-                clientHeight={this.props.illustrationBox.clientWidth}
+                clientWidth={illustrationBox.clientWidth}
+                clientHeight={illustrationBox.clientWidth}
                 img={data.image}
                 count={data.count}
                 width={data.width}
                 height={data.height}
                 collection={data.collection}
-                id={data.id}/>
+                id={data.id}
+                heartState={heartState}/>
             )
           }
         </div>

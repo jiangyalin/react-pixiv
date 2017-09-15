@@ -1,20 +1,26 @@
-html{color:#4a4a4a;}
+@font-face {
+  font-family: 'font';
+  src: url('../fonts/蒙纳简俏皮.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+html{font-family:"font";color:#4a4a4a;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
-dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,textarea,p,blockquote,th,td,span{font-family:"微软雅黑";}
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,textarea,p,blockquote,th,td,span{font-family:"font";}
 body{font:12px/1 Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;}
 img{border:none;}
 em,strong{font-style:normal;font-weight:normal;}
 li{list-style:none;}
 table {border-collapse:collapse;border-spacing:0;}
-h1{font-size:18px;font-family:"微软雅黑";}
-h2{font-size:16px;font-family:"微软雅黑";}
-h3{font-size:14px;font-family:"微软雅黑";}
-h4, h5, h6{font-size:100%;font-family:"微软雅黑";}
+h1{font-size:18px;font-family:"font";}
+h2{font-size:16px;font-family:"font";}
+h3{font-size:14px;font-family:"font";}
+h4, h5, h6{font-size:100%;font-family:"font";}
 q:before,q:after{content:'';}/* 消除q前后的内容 */
 button,input,select,textarea{font-size:100%;}/* 使得表单元素在 ie 下能继承字体大小 */
 input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
 address,cite,dfn,em,var,i{font-style:normal;color:inherit;line-height:inherit;} /* 将斜体扶正 */
 /*link */
-a{text-decoration:none;font-family:"微软雅黑";color:inherit}
+a{text-decoration:none;font-family:"font";color:inherit}
 a:hover{text-decoration:none;}
 input,button,textarea,select{outline:none;}/*清除元素轮廓*/

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { turn, isMnOpen, isMnOff } from '../actions/Toolbar';
+import { initData, turn, isMnOpen, isMnOff } from '../actions/Toolbar';
 import { Nav, HomeNav, Toolbar, RankingTitle, IllustrationTop, IllustrationBox, Title } from './../components';
 
 class Home extends React.Component {
@@ -11,6 +11,9 @@ class Home extends React.Component {
       <div>
         <Toolbar
           data={dataToolbar}
+          onInitData={() => {
+            this.props.dispatch(initData)
+          }}
           onToolbarMnOff={() => {
             this.props.dispatch(isMnOff)
           }}
@@ -28,7 +31,7 @@ class Home extends React.Component {
         <RankingTitle/>
         <IllustrationTop illustrationTopData={illustrationTopData}/>
         <Title/>
-        <IllustrationBox illustrationBox={illustrationBox}/>
+        <IllustrationBox illustrationBox={illustrationBox} heartState={true}/>
       </div>
     )
   }

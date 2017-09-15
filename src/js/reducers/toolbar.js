@@ -1,4 +1,6 @@
 import {
+  TOOLBAR_DATA,
+  TOOLBAR_INIT,
   TOOLBAR_TURN_ON,
   TOOLBAR_IS_MN_OPEN,
   TOOLBAR_IS_MN_OFF
@@ -9,7 +11,8 @@ const init = {
   isMnTap: false,
   userInfo: {
     name: '一方通行',
-    phone: '18725944157'
+    phone: '18725944157',
+    photo: ''
   },
   navInfo: [{
     path: '/',
@@ -61,6 +64,15 @@ const init = {
 
 export default ( state = init, action ) => {
   switch (action.type) {
+    case TOOLBAR_DATA:
+      return {
+        ...state
+      };
+    case TOOLBAR_INIT:
+      return {
+        ...state,
+        userInfo: action.userInfo
+      };
     case TOOLBAR_TURN_ON:
       return {
         ...state,

@@ -4,7 +4,7 @@ const app = express();
 const session = require('express-session');
 const pkg = require('./package');
 const config = {
-  port: 8087
+  port: 8086
 };
 
 app.set('dist',path.join(__dirname,'dist'));

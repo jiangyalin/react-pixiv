@@ -6,13 +6,17 @@ import PixivLeftTitle from './PixivLeftTitle'
 import styles from './index.scss'
 
 class Toolbar extends React.Component {
+  componentDidMount () {
+    this.props.onInitData();
+  };
   onToolbarMnTap = () => {
     if(!this.props.data.isMnTap) {
       this.props.onTurnClick();
     }
+    console.log('k',this.props.data)
   };
   render() {
-    const { data, onToolbarMnOff, onToolbarMnOpen } = this.props;
+    const { data, onInitData, onToolbarMnOff, onToolbarMnOpen } = this.props;
     let active = '';
     if(data.status) {
       active = styles.active;

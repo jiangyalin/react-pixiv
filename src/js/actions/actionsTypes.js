@@ -3,6 +3,8 @@ export const increase = 'increase';
 export const cutback = 'cutback';
 
 // Toolbar
+export const TOOLBAR_DATA = 'TOOLBAR_DATA';
+export const TOOLBAR_INIT = 'TOOLBAR_INIT';
 export const TOOLBAR_TURN_ON = 'TOOLBAR_TURN_ON';
 export const TOOLBAR_IS_MN_OPEN = 'TOOLBAR_IS_MN_OPEN';
 export const TOOLBAR_IS_MN_OFF = 'TOOLBAR_IS_MN_OFF';
