@@ -27,3 +27,6 @@ export const HOME_NAV_SET_SCROLL_TOP = 'HOME_NAV_SET_SCROLL_TOP';
 
 // InfoNav
 export const INFO_NAV_SET_STATE = 'INFO_NAV_SET_STATE';
+
+// FormLogin
+export const FORM_LOGIN_INPUT_ACTIVE = 'FORM_LOGIN_INPUT_ACTIVE';

@@ -10,10 +10,7 @@ class InfoNav extends React.Component {
     this.props.dispatch(setState(!this.props.infoNavData.state));
   };
   Click = (e) => {
-    console.log('e', e);
-    console.log('this', this);
     e.stopPropagation();
-    console.log("kkk")
   };
   render() {
     const { infoNavData } = this.props;

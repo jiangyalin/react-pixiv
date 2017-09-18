@@ -6,10 +6,14 @@ import { FormLogin, IllustrationBox } from '../components'
 
 class Login extends React.Component {
   render() {
-    const { illustrationBox } = this.props;
+    const { formLogin, illustrationBox } = this.props;
+    const handleScroll = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
     return (
-      <div>
-        <FormLogin/>
+      <div onWheel={handleScroll}>
+        <FormLogin formLogin={formLogin} />
         <IllustrationBox illustrationBox={illustrationBox} heartState={false} />
       </div>
     )
@@ -18,7 +22,8 @@ class Login extends React.Component {
 
 const mapStateToProps = (store, ownProps) => {
   return{
-    illustrationBox: store.illustrationBox
+    illustrationBox: store.illustrationBox,
+    formLogin: store.formLogin
   }
 };
 

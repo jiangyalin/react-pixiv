@@ -18,7 +18,7 @@ h3{font-size:14px;font-family:"font";}
 h4, h5, h6{font-size:100%;font-family:"font";}
 q:before,q:after{content:'';}/* 消除q前后的内容 */
 button,input,select,textarea{font-size:100%;}/* 使得表单元素在 ie 下能继承字体大小 */
-input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select,optgroup,option{font-family:"font";font-size:inherit;font-style:inherit;font-weight:inherit;color:inherit;}
 address,cite,dfn,em,var,i{font-style:normal;color:inherit;line-height:inherit;} /* 将斜体扶正 */
 /*link */
 a{text-decoration:none;font-family:"font";color:inherit}

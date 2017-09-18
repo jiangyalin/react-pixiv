@@ -1,0 +1,36 @@
+.box{
+  position: relative;
+  width: 100%;
+  height: 1.14rem;
+  font-size: .26rem;
+  color: #929292;
+}
+.title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: .5rem;
+  line-height: .4rem;
+  pointer-events: none;
+  transition: .3s;
+}
+.tt_active{
+  padding-top: 0;
+  font-size: .21rem;
+  line-height: .5rem;
+  color: #2196f3;
+}
+.input{
+  margin-bottom: .2rem;
+  padding: .5rem .05rem 0 .05rem;
+  width: 100%;
+  height: .4rem;
+  line-height: .4rem;
+  color: #929292;
+  border: 0;
+  border-bottom: .02rem solid #bbb;
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+.ipt_active{
+  border-bottom: .04rem solid #2196f3;
+}
