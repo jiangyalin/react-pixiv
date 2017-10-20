@@ -3,23 +3,10 @@ import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
 import styles from './index.scss';
-import { setScrollTop } from '../../actions/HomeNav';
 
 class Nav extends React.Component {
 
   render() {
-
-    const data = this.props;
-
-    const getScrollTop = () => {
-      var scrollPos;
-      if (window.pageYOffset) {
-        scrollPos = window.pageYOffset; }
-      else if (document.compatMode && document.compatMode != 'BackCompat')
-      { scrollPos = document.documentElement.scrollTop; }
-      else if (document.body) { scrollPos = document.body.scrollTop; }
-      return scrollPos;
-    };
 
     window.addEventListener('scroll', function () {
       // g-mn("kkk");

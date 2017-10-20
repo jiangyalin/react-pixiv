@@ -17,7 +17,7 @@ class IllustrationTop extends React.Component {
     const Pan = e => {
       let mobile = data.thisX + e.center.x - data.initX;
       const isCrossBorder = mobile > 0 || this.refs.box.clientWidth - this.refs.mn.clientWidth > mobile;
-      if (!isCrossBorder) this.props.dispatch(setTop(mobile));
+      if (!isCrossBorder) {this.props.dispatch(setTop(mobile));}
     };
     const PanEnd = e => {
       let count = 0;

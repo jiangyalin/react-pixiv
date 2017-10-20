@@ -22,12 +22,15 @@ const config = {
   module: {
     rules: [{
       test: /\.js$/,
-      use: 'babel-loader',
+      use: [
+        {loader: 'babel-loader'},
+        {loader: 'eslint-loader'}
+      ],
       exclude: /node_modules/,
       include: [
         path.resolve(__dirname, 'src')
       ]
-    }, {
+    },{
       test: /\.scss$/,
       use: [
         {loader: 'style-loader'},

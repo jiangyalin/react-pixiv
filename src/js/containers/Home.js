@@ -8,7 +8,7 @@ class Home extends React.Component {
   render() {
     const { dataToolbar, illustrationBox, illustrationTopData, homeNavData } = this.props;
     return (
-      <div>
+      <div>{console.log(this)}
         <Toolbar
           data={dataToolbar}
           onInitData={() => {
@@ -37,7 +37,8 @@ class Home extends React.Component {
   }
 }
 
-const mapStateToProps = (store, ownProps) => {
+// const mapStateToProps = (store, ownProps) => {
+const mapStateToProps = (store) => {
   return {
     dataToolbar: store.toolbar,
     illustrationBox: store.illustrationBox,

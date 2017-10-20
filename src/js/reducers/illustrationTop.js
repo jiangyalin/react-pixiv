@@ -105,7 +105,7 @@ const illustrationTop = ( state = init, action ) => {
       };
     case ILLUSTRATION_TOP_SET_IMG_SIZE:
       let elements = state.elements.map(data =>
-        data.id == action.id ?
+        data.id === action.id ?
         {
           ...data,
           width: action.width,
@@ -118,7 +118,7 @@ const illustrationTop = ( state = init, action ) => {
       };
     case ILLUSTRATION_TOP_COLLECTION:
       let elements_2 = state.elements.map(data =>
-        data.id == action.id ?
+        data.id === action.id ?
         {
           ...data,
           collection: action.collection

@@ -4,7 +4,7 @@ import { init } from '../actions/Toolbar';
 
 function fetchToolbarApi(url) {
   return fetch(url)
-    .then(response => response.json() )
+    .then(response => response.json())
 }
 
 export function* incrementAsync() {

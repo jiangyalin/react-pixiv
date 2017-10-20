@@ -9,14 +9,14 @@ class Input extends React.Component {
     const { id, status, title, type } = this.props;
     let tt_active = '';
     let ipt_active = '';
-    if (status) tt_active = styles.tt_active;
-    if (status) ipt_active = styles.ipt_active;
+    if (status) {tt_active = styles.tt_active;}
+    if (status) {ipt_active = styles.ipt_active;}
     const focus = () => {
       this.props.dispatch(setInputActive(id, true));
     };
     const blur = () => {
       const value = document.getElementById('input'+id).value;
-      if(value == '') this.props.dispatch(setInputActive(id, false));
+      if(value === '') {this.props.dispatch(setInputActive(id, false));}
     };
     return (
       <div className={styles.box}>

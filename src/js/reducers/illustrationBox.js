@@ -99,7 +99,7 @@ const illustrationBox = ( state = init, action ) => {
       };
     case ILLUSTRATION_BOX_SET_IMG_SIZE:
       let Illustrations = state.Illustrations.map(data =>
-        data.id == action.id ?
+        data.id === action.id ?
         {
           ...data,
           width: action.width,
@@ -112,7 +112,7 @@ const illustrationBox = ( state = init, action ) => {
       };
     case ILLUSTRATION_BOX_COLLECTION:
       let Illustrations_2 = state.Illustrations.map(data =>
-        data.id == action.id ?
+        data.id === action.id ?
         {
           ...data,
           collection: action.collection

@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { initData, turn, isMnOpen, isMnOff } from '../actions/Toolbar';
 import { FormLogin, IllustrationBox } from '../components'
 
 class Login extends React.Component {
@@ -20,7 +19,7 @@ class Login extends React.Component {
   }
 }
 
-const mapStateToProps = (store, ownProps) => {
+const mapStateToProps = (store) => {
   return{
     illustrationBox: store.illustrationBox,
     formLogin: store.formLogin

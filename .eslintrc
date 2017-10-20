@@ -1,0 +1,33 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
+//    "extends": "eslint:recommended", // 默认模式
+    "rules": {
+        "no-extra-semi": ["error"], // 禁止不必要的分号
+        "no-cond-assign": ["error"], // 禁止条件表达式中出现赋值操作符
+        "no-dupe-args": ["error"], // 禁止 function 定义中出现重名参数
+        "no-dupe-keys": ["error"], // 禁止对象字面量中出现重复的 key
+        "no-empty": ["error"], // 禁止出现空语句块
+        "no-extra-boolean-cast": ["error"], // 禁止不必要的布尔转换
+        "no-invalid-regexp": ["error"], // 禁止 RegExp 构造函数中存在无效的正则表达式字符串
+        "no-irregular-whitespace": ["error"], // 禁止在字符串和注释之外不规则的空白
+//        "no-console": ["error"], // 禁用 console
+        "consistent-return": ["error"], // 要求 return 语句要么总是指定返回的值，要么不指定
+        "curly": ["error", "all"], // 强制所有控制语句使用一致的括号风格
+        "dot-location": ["error", "property"], // 强制在点号之前和之后一致的换行
+        "eqeqeq": ["error"], // 要求使用 === 和 !==
+        "no-empty-function": ["error"], // 禁止出现空函数
+//        "no-invalid-this": ["error"], // 禁止 this 关键字出现在类和类对象之外
+        "no-multi-spaces": ["error"], // 禁止使用多个空格
+        "dot-notation": ["error"], // 强制尽可能地使用点号
+        "no-redeclare": ["error"], // 禁止多次声明同一变量
+        "vars-on-top": ["error"], // 要求所有的 var 声明出现在它们所在的作用域顶部
+        "no-undefined": ["error"], // 禁止将 undefined 作为标识符
+        "no-unused-vars": ["error"], // 禁止出现未使用过的变量
+        "no-use-before-define": ["error"], // 禁止在变量定义之前使用它们
+        "react/jsx-uses-react": "error", // dd
+        "react/jsx-uses-vars": "error"
+    }
+}

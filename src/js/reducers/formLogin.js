@@ -21,7 +21,7 @@ const formLogin = ( state = init, action ) => {
   switch (action.type) {
     case FORM_LOGIN_INPUT_ACTIVE:
       let input = state.input.map(data =>
-      data.id == action.id ?
+      data.id === action.id ?
       {
         ...data,
         status: action.status

@@ -1,5 +1,5 @@
 import React from 'react'
-import Hammer from 'react-hammerjs';
+import Hammer from 'react-hammerjs'
 import PixivLeftLink from './PixivLeftLink'
 import PixivLeftInfo from './PixivLeftInfo'
 import PixivLeftTitle from './PixivLeftTitle'
@@ -8,7 +8,7 @@ import styles from './index.scss'
 class Toolbar extends React.Component {
   componentDidMount () {
     this.props.onInitData();
-  };
+  }
   onToolbarMnTap = () => {
     if(!this.props.data.isMnTap) {
       this.props.onTurnClick();
@@ -16,7 +16,7 @@ class Toolbar extends React.Component {
     console.log('k',this.props.data)
   };
   render() {
-    const { data, onInitData, onToolbarMnOff, onToolbarMnOpen } = this.props;
+    const { data, onToolbarMnOff, onToolbarMnOpen } = this.props;
     let active = '';
     if(data.status) {
       active = styles.active;
